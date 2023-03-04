@@ -1,37 +1,54 @@
 [
     {
-        "bibtex": "@inproceedings{yimiao2023aim,\n  title     = {AIM: Acoustic Inertial Measurement for Indoor Drone Localization and Tracking},\n  author    = {Sun, Yimiao and Wang, Weiguo and Mottola, Luca and Wang, Ruijin and He, Yuan},\n  booktitle = {Proceedings of the 20th Conference on Embedded Networked Sensor Systems, {Sensys'22}},\n  publisher = {Association for Computing Machinery},\n  address    = {New York, NY, USA},\n  pages     = {476–488},\n  year      = {2022},\n   doi       = {10.1145/3560905.3568499}\n}\n",
+        "bibtex": "@inproceedings{zihao2022smartisch,\n  title     = {SmarTiSCH: An interference-aware engine for IEEE 802.15. 4e-based networks},\n  author    = {Yu, Zihao and Na, Xin and Boano, Carlo Alberto and He, Yuan and Guo, Xiuzhen and Li, Pengyu and Jin, Meng},\n  booktitle = {2022 21st ACM/IEEE International Conference on Information Processing in Sensor Networks (IPSN)},\n  pages     = {350-362},\n  year      = {2022},\n  organization={IEEE},\n doi       = {10.1109/IPSN54338.2022.00035}\n}\n",
         "authors": {
-            "boldAuthors": ["Yimiao Sun"],
+            "boldAuthors": ["Zihao Yu"],
             "correspondingAuthors": ["Yuan He"],
             "equalContributionAuthors": null
         },
         "note": "",
         "resources": {
-            "pdf": "./files/PDF/AIM.pdf",
-            "slides": "./files/Slides/AIM.pdf",
+            "pdf": "./files/PDF/SmarTiSCH.pdf",
+            "slides": "./files/Slides/SmarTiSCH_slides.pdf",
             "code": null,
             "demo": null
         },
-        "figure":"./files/Fig/AIM.png",
-        "abstract": "We present Acoustic Inertial Measurement (AIM), a one-of-a-kind technique for indoor drone localization and tracking. Indoor drone localization and tracking are arguably a crucial, yet unsolved challenge: in GPS-denied environments, existing approaches enjoy limited applicability, especially in Non-Line of Sight (NLoS), require extensive environment instrumentation, or demand considerable hardware/software changes on drones. In contrast, AIM exploits the acoustic characteristics of the drones to estimate their location and derive their motion, even in NLoS settings. We tame location estimation errors using a dedicated Kalman filter and the Interquartile Range rule (IQR). We implement AIM using an off-the-shelf microphone array and evaluate its performance with a commercial drone under varied settings. Results indicate that the mean localization error of AIM is 46% lower than commercial UWB-based systems in complex indoor scenarios, where state-of-the-art infrared systems would not even work because of NLoS settings. We further demonstrate that AIM can be extended to support indoor spaces with arbitrary ranges and layouts without loss of accuracy by deploying distributed microphone arrays."
+        "figure":"./files/Fig/SmarTiSCH-engine.png",
+        "abstract": "Time-Slotted Channel Hopping (TSCH) is a popular link-layer protocol defined in the IEEE 802.15.4e standard that improves the reliability and throughput of wireless sensor networks by exploiting diversity in both time and frequency. Despite the body of literature proposing several scheduling schemes for TSCH, a gap yet to be filled is the design of an effective way to deal with internal and external interference, which are both known to strongly affect communication performance. In fact, existing works either make use of a fixed schedule (and hence cannot cope with interference), or require extra control traffic (and hence increase energy consumption). In this paper, we present SmarTiSCH, an interference-aware engine for IEEE 802.15.4e-based networks that retains the simplicity and energy-efficiency of autonomous scheduling, while increasing the awareness as well as robustness to both internal and external interference. With SmarTiSCH, the nodes in the network infer the presence of interference and react to it without the need of extra control traffic. Specifically, SmarTiSCH enables each node to infer the interference by passively observing existing data exchanges. It then lets a pair of nodes exchange information and mutually agree on a proper strategy to mitigate interference without the need of extra transmissions. We implement SmarTiSCH in ContikiNG and evaluate its performance on a testbed of 20 off-the-shelf IEEE 802.15.4 devices based on the nRF52840. Our results show that SmarTiSCH increases the reliability of transmissions by up to 2.9 times compared to state-of-the-art approaches in the presence of interference, while even lowering the duty cycle by 54.3%."
     },
     {
-        "bibtex": "@inproceedings{weiguo2023micnest,\n  title     = {MicNest: Long-Range Instant Acoustic Localization of Drones in Precise Landing},\n  author    = {Wang, Weiguo and Mottola, Luca and He, Yuan and Li, Jinming and Sun, Yimiao and Li, Shuai and Jing, Hua and Wang, Yulei},\n  booktitle = {Proceedings of the 20th Conference on Embedded Networked Sensor Systems, {Sensys'22}},\n  publisher = {Association for Computing Machinery},\n  address    = {New York, NY, USA},\n  pages     = {504–517},\n  year      = {2022},\n   doi       = {10.1145/3560905.3568515}\n}\n",
+        "bibtex": "@inproceedings{zihao2021bicord,\n  title     = {BiCord: Bidirectional coordination among coexisting wireless devices},\n  author    = {Yu, Zihao and Li, Pengyu and Boano, Carlo Alberto and He, Yuan and Jin, Meng and Guo, Xiuzhen and Zheng, Xiaolong},\n  booktitle = {2021 IEEE 41st International Conference on Distributed Computing Systems (ICDCS)},\n  publisher = {IEEE},\n  pages     = {304-314},\n  year      = {2021},\n   doi       = {10.1109/ICDCS51616.2021.00037}\n}\n",
         "authors": {
-            "boldAuthors": ["Yimiao Sun"],
+            "boldAuthors": ["Zihao Yu"],
             "correspondingAuthors": ["Yuan He"],
             "equalContributionAuthors": null
         },
         "note": "",
         "resources": {
-            "pdf": "./files/PDF/MicNest.pdf",
-            "slides": "./files/Slides/MicNest.pdf",
+            "pdf": "./files/PDF/BiCord.pdf",
+            "slides": "./files/Slides/BiCord_slides.pdf",
             "code": null,
-            "demo": "https://micnest.github.io/"
+            "demo": null
         },
-        "figure": "./files/Fig/MicNest.png",
-        "abstract": "We present MicNest: an acoustic localization system enabling precise landing of aerial drones. Drone landing is a crucial step in a drone's operation, especially as high-bandwidth wireless networks, such as 5G, enable beyond-line-of-sight operation in a shared airspace and applications such as instant asset delivery with drones gain traction. In MicNest, multiple microphones are deployed on a landing platform in carefully devised configurations. The drone carries a speaker transmitting purposefully-designed acoustic pulses. The drone may be localized as long as the pulses are correctly detected. Doing so is challenging: i) because of limited transmission power, propagation attenuation, background noise, and propeller interference, the Signal-to-Noise Ratio (SNR) of received pulses is intrinsically low; ii) the pulses experience non-linear Doppler distortion due to the physical drone dynamics while airborne; iii) as location information is to be used during landing, the processing latency must be reduced to effectively feed the flight control loop. To tackle these issues, we design a novel pulse detector, Matched Filter Tree (MFT), whose idea is to convert pulse detection to a tree search problem. We further present three practical methods to accelerate tree search jointly. Our real-world experiments show that MicNest is able to localize a drone 120 m away with 0.53% relative localization error at 20 Hz location update frequency."
+        "figure": "./files/Fig/BiCord_Design.png",
+        "abstract": "Cross-technology interference is a major threat to the dependability of low-power wireless communications. Due to power and bandwidth asymmetries, technologies such as Wi-Fi tend to dominate the RF channel and unintentionally destroy low-power wireless communications from resource-constrained technologies such as ZigBee, leading to severe coexistence issues. To address these issues, existing schemes make ZigBee nodes individually assess the RF channel's availability or let Wi-Fi appliances blindly reserve the medium for the transmissions of low-power devices. Without a two-way interaction between devices making use of different wireless technologies, these approaches have limited scenarios or achieve inefficient network performance. This paper presents BiCord, a bidirectional coordination scheme in which resource-constrained wireless devices such as ZigBee nodes and powerful Wi-Fi appliances coordinate their activities to increase coexistence and enhance network performance. Specifically, in BiCord, ZigBee nodes directly request channel resources from Wi-Fi devices, who then reserve the channel for ZigBee transmissions on-demand. This interaction continues until the transmission requirement of ZigBee nodes is both fulfilled and understood by Wi-Fi devices. This way, BiCord avoids unnecessary channel allocations, maximizes the availability of the spectrum, and minimizes transmission delays. We evaluate BiCord on off-the-shelf Wi-Fi and ZigBee devices, demonstrating its effectiveness experimentally. Among others, our results show that BiCord increases channel utilization by up to 50.6% and reduces the average transmission delay of ZigBee nodes by 84.2% compared to state-of-the-art approaches."
+    },
+    {
+        "bibtex": "@inproceedings{zihao2021crocs,\n  title     = {Crocs: Cross-technology clock synchronization for wifi and zigbee},\n  author    = {Yu, Zihao and Jiang, Chengkun and He, Yuan and Zheng, Xiaolong and Guo, Xiuzhen},\n  booktitle = {Proceedings of the 2018 International Conference on Embedded Wireless Systems and Networks},\n  publisher = {ACM},\n  pages     = {135–144},\n  year      = {2018},\n   doi       = {10.5555/3234847.3234865}\n}\n",
+        "authors": {
+            "boldAuthors": ["Zihao Yu"],
+            "correspondingAuthors": ["Yuan He"],
+            "equalContributionAuthors": null
+        },
+        "note": "",
+        "resources": {
+            "pdf": "./files/PDF/Crocs.pdf",
+            "slides": "./files/Slides/Crocs_slides.pdf",
+            "code": null,
+            "demo": null
+        },
+        "figure": "./files/Fig/Crocs_sliding_window.png",
+        "abstract": "Clock synchronization is a key function in embedded wireless systems and networks. This issue is equally important and more challenging in IoT systems nowadays, which often include heterogeneous wireless devices that follow different wireless standards. Conventional solutions to this problem employ gateway-based indirect synchronization, which suffer low accuracy. This paper for the first time studies the problem of cross-technology clock synchronization. Our proposal called Crocs synchronizes WiFi and ZigBee devices by direct cross-technology communication. Crocs decouples the synchronization signal from the transmission of a timestamp. By incorporating a barker-code based beacon for time alignment and cross-technology transmission of timestamps, Crocs achieves robust and accurate synchronization among WiFi and ZigBee devices, with the synchronization error lower than 1 millisecond. We further make attempts to implement different cross-technology communication methods in Crocs and provide insight findings with regard to the achievable accuracy and expected overhead."
     }    
 
 ]
